@@ -1,4 +1,4 @@
-# shark-methlab
+# shark-cofffee
 A simple script that let's you get a cup of coffee.
 
 ## Dependencies:
