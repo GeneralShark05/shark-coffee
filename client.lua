@@ -15,6 +15,7 @@ local options = {
     {
         name = 'shark:coffeebl',
         onSelect = function() 
+            TriggerServerEvent('sharkcoffee-coffee', 1)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -27,7 +28,6 @@ local options = {
                     dict = 'amb@prop_human_atm@male@idle_a', 
                     clip = 'idle_a'
                 }})
-                TriggerServerEvent('sharkcoffee-coffee', 1)
         end,        
         icon = 'fa-solid fa-mug-hot',
         label = 'Make Black Coffee',
