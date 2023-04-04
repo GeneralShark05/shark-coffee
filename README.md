@@ -1,6 +1,9 @@
 # shark-cofffee
 A simple script that let's you get a cup of coffee.
 
+
+To use: Have atleast $3 in your inventory, and walk up to a coffee machine.
+
 ## Dependencies:
 - [ox_lib](https://github.com/overextended/ox_lib)
 - [ox_target](https://github.com/overextended/ox_target)
