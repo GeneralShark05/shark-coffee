@@ -11,7 +11,8 @@ local modelsWater = {
 local optionsWater = {
     {
         name = 'shark:water',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-water', 1)
             lib.progressBar({
                 duration = 2000,
                 label = 'Filling Water',
@@ -24,7 +25,6 @@ local optionsWater = {
                     dict = 'amb@prop_human_atm@male@idle_a', 
                     clip = 'idle_a'
                 }})
-                TriggerServerEvent('sharkcoffee-water', 1)
         end,
         icon = 'fa-solid fa-bottle-water',
         label = 'Get Water',
@@ -49,7 +49,8 @@ local modelsSoda = {
 local optionsSoda = {
     {
         name = 'shark:sodasp',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-can', 5)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -60,7 +61,6 @@ local optionsSoda = {
                 },
                 anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
             })
-            TriggerServerEvent('sharkcoffee-can', 5)
         end,        
         icon = 'fa-solid fa-lemon',
         label = 'Buy Sprunk',
@@ -70,7 +70,8 @@ local optionsSoda = {
     },
     {
         name = 'shark:sodasl',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-can', 6)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -81,7 +82,6 @@ local optionsSoda = {
                 },
                 anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
             })
-            TriggerServerEvent('sharkcoffee-can', 6)
         end,        
         icon = 'fa-regular fa-lemon',
         label = 'Buy Sprunk Light',
@@ -91,7 +91,8 @@ local optionsSoda = {
     },
     {
         name = 'shark:sodaot',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-can', 7)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -102,7 +103,6 @@ local optionsSoda = {
                 },
                 anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
             })
-            TriggerServerEvent('sharkcoffee-can', 7)
         end,        
         icon = 'fa-solid fa-apple-whole',
         label = 'Buy Orang-O-Tang',
@@ -112,7 +112,8 @@ local optionsSoda = {
     },
     {
         name = 'shark:sodaec',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-can', 8) 
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -123,7 +124,6 @@ local optionsSoda = {
                 },
                 anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
             })
-            TriggerServerEvent('sharkcoffee-can', 8)
         end,        
         icon = 'fa-solid fa-jar',
         label = 'Buy eCola',
@@ -134,6 +134,7 @@ local optionsSoda = {
     {
         name = 'shark:sodaed',
         onSelect = function()
+            TriggerServerEvent('sharkcoffee-can', 9)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -144,7 +145,6 @@ local optionsSoda = {
                 },
                 anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
             })
-            TriggerServerEvent('sharkcoffee-can', 9)
         end,
         icon = 'fa-solid fa-d',
         label = 'Buy Diet eCola',
@@ -169,7 +169,8 @@ local modelsCoffee = {
 local optionsCoffee = {
     {
         name = 'shark:coffeebl',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-coffee', 1)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -182,7 +183,6 @@ local optionsCoffee = {
                     dict = 'amb@prop_human_atm@male@idle_a', 
                     clip = 'idle_a'
             }})
-            TriggerServerEvent('sharkcoffee-coffee', 1)
         end,        
         icon = 'fa-solid fa-mug-hot',
         label = 'Make Black Coffee',
@@ -192,7 +192,8 @@ local optionsCoffee = {
     },
     {
         name = 'shark:coffeemk',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-coffee', 2)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -205,7 +206,6 @@ local optionsCoffee = {
                     dict = 'amb@prop_human_atm@male@idle_a', 
                     clip = 'idle_a'
             }})
-            TriggerServerEvent('sharkcoffee-coffee', 2)
         end,
         icon = 'fa-solid fa-cow',
         label = 'Make Coffee with Milk',
@@ -215,7 +215,8 @@ local optionsCoffee = {
     },
     {
         name = 'shark:coffeesg',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-coffee', 3)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -228,7 +229,6 @@ local optionsCoffee = {
                     dict = 'amb@prop_human_atm@male@idle_a', 
                     clip = 'idle_a'
             }})
-            TriggerServerEvent('sharkcoffee-coffee', 3)
         end,
         icon = 'fa-solid fa-cubes-stacked',
         label = 'Make Coffee with Sugar',
@@ -238,7 +238,8 @@ local optionsCoffee = {
     },
     {
         name = 'shark:coffedb',
-        onSelect = function() 
+        onSelect = function()
+            TriggerServerEvent('sharkcoffee-coffee', 4)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -251,7 +252,6 @@ local optionsCoffee = {
                     dict = 'amb@prop_human_atm@male@idle_a', 
                     clip = 'idle_a'
             }})
-            TriggerServerEvent('sharkcoffee-coffee', 4)
         end,
         icon = 'fa-brands fa-canadian-maple-leaf',
         label = 'Make Double-Double',

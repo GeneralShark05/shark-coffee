@@ -7,16 +7,22 @@ local itemName = {
 }
 
 RegisterServerEvent('sharkcoffee-coffee', function(type)
+	local source = source
 	ox_inventory:RemoveItem(source, 'money', 3)
+	Wait(2000)
 	ox_inventory:AddItem(source, 'coffee', 1, {label = itemName[type], description = 'A '..itemName[type]})
 end)
 
 RegisterServerEvent('sharkcoffee-can', function(type)
+	local source = source
 	ox_inventory:RemoveItem(source, 'money', 2)
+	Wait(4000)
 	ox_inventory:AddItem(source, 'can', 1, {label = 'Can of '..itemName[type], description = 'A can of '..itemName[type], image = itemName[type]})
 end)
 
 RegisterServerEvent('sharkcoffee-water', function(type)
+	local source = source
 	ox_inventory:RemoveItem(source, 'money', 1)
+	Wait(2000)
 	ox_inventory:AddItem(source, 'water', 1)
 end)
