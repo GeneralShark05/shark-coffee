@@ -51,3 +51,5 @@ Add the following to your data/items.lua in ox_inventory
 ## Credits:
 
 Thanks to Agimir for the Coffee Icon
+
+[Support - Discord](https://discord.gg/mFnNTV2Zce)
