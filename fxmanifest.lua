@@ -5,7 +5,7 @@ lua54 'yes'
 
 author 'General Shark'
 description 'Get yourself a nice cup of coffee.'
-version '1.0'
+version '1.3'
 
 dependencies { 'ox_lib', 'ox_target', 'ox_inventory'}
 
