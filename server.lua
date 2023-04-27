@@ -25,8 +25,8 @@ RegisterServerEvent('sharkcoffee:buy', function(type, name)
 	local src = source
 	local count = ox_inventory:Search(src, 'count', 'money')
 	if count >= classes[type].cost then
-		ox_inventory:RemoveItem(src, 'money', classes[type])
-		Wait(classes[type])
+		ox_inventory:RemoveItem(src, 'money', classes[type].cost)
+		Wait(classes[type].waitTime)
 		if type == 'coffee' then
 			ox_inventory:AddItem(src, 'coffee', 1, {label = itemName[name], description = 'A '..itemName[name]})
 		elseif type == 'can' then

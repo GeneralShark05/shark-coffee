@@ -12,7 +12,7 @@ local optionsWater = {
     {
         name = 'shark:water',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'water', 1)
+            TriggerServerEvent('sharkcoffee:buy', 'water', 1)
             lib.progressBar({
                 duration = 2000,
                 label = 'Filling Water',
@@ -50,7 +50,7 @@ local optionsSoda = {
     {
         name = 'shark:sodasp',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'can', 5)
+            TriggerServerEvent('sharkcoffee:buy', 'can', 5)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -71,7 +71,7 @@ local optionsSoda = {
     {
         name = 'shark:sodasl',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'can', 6)
+            TriggerServerEvent('sharkcoffee:buy', 'can', 6)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -92,7 +92,7 @@ local optionsSoda = {
     {
         name = 'shark:sodaot',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'can', 7)
+            TriggerServerEvent('sharkcoffee:buy', 'can', 7)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -113,7 +113,7 @@ local optionsSoda = {
     {
         name = 'shark:sodaec',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'can', 8) 
+            TriggerServerEvent('sharkcoffee:buy', 'can', 8) 
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -134,7 +134,7 @@ local optionsSoda = {
     {
         name = 'shark:sodaed',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'can', 9)
+            TriggerServerEvent('sharkcoffee:buy', 'can', 9)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -170,7 +170,7 @@ local optionsCoffee = {
     {
         name = 'shark:coffeebl',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'coffee', 1)
+            TriggerServerEvent('sharkcoffee:buy', 'coffee', 1)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -193,7 +193,7 @@ local optionsCoffee = {
     {
         name = 'shark:coffeemk',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'coffee', 2)
+            TriggerServerEvent('sharkcoffee:buy', 'coffee', 2)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -216,7 +216,7 @@ local optionsCoffee = {
     {
         name = 'shark:coffeesg',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'coffee', 3)
+            TriggerServerEvent('sharkcoffee:buy', 'coffee', 3)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
@@ -239,7 +239,7 @@ local optionsCoffee = {
     {
         name = 'shark:coffedb',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee-buy', 'coffee', 4)
+            TriggerServerEvent('sharkcoffee:buy', 'coffee', 4)
             lib.progressBar({
                 duration = 2000,
                 label = 'Ordering Coffee',
