@@ -1,5 +1,7 @@
 local ox_inventory = exports.ox_inventory
 
+local maxDistance = 1.5
+
 --------- Water
 local modelsWater = {
     'prop_vend_water_01',
@@ -22,21 +24,21 @@ local optionsWater = {
                     move = true,
                 },
                 anim = {
-                    dict = 'amb@prop_human_atm@male@idle_a', 
+                    dict = 'amb@prop_human_atm@male@idle_a',
                     clip = 'idle_a'
-                }})
+                }
+            })
         end,
         icon = 'fa-solid fa-bottle-water',
         label = 'Get Water',
-        items = {
-            ['money'] = 1
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     }
 }
 
 exports.ox_target:addModel(modelsWater, optionsWater)
 
-exports.ox_target:addModel(modelsSoda, optionsSoda)
 --------- Vending Machines
 local modelsSoda = {
     'prop_vend_soda_01',
@@ -59,14 +61,14 @@ local optionsSoda = {
                 disable = {
                     move = true,
                 },
-                anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
+                anim = { dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1' },
             })
-        end,        
+        end,
         icon = 'fa-solid fa-lemon',
         label = 'Buy Sprunk',
-        items = {
-            ['money'] = 2
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:sodasl',
@@ -80,14 +82,14 @@ local optionsSoda = {
                 disable = {
                     move = true,
                 },
-                anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
+                anim = { dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1' },
             })
-        end,        
+        end,
         icon = 'fa-regular fa-lemon',
         label = 'Buy Sprunk Light',
-        items = {
-            ['money'] = 2
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:sodaot',
@@ -101,19 +103,19 @@ local optionsSoda = {
                 disable = {
                     move = true,
                 },
-                anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
+                anim = { dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1' },
             })
-        end,        
+        end,
         icon = 'fa-solid fa-apple-whole',
         label = 'Buy Orang-O-Tang',
-        items = {
-            ['money'] = 2
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:sodaec',
         onSelect = function()
-            TriggerServerEvent('sharkcoffee:buy', 'can', 8) 
+            TriggerServerEvent('sharkcoffee:buy', 'can', 8)
             lib.progressBar({
                 duration = 4000,
                 label = 'Buying Soda',
@@ -122,14 +124,14 @@ local optionsSoda = {
                 disable = {
                     move = true,
                 },
-                anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
+                anim = { dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1' },
             })
-        end,        
+        end,
         icon = 'fa-solid fa-jar',
         label = 'Buy eCola',
-        items = {
-            ['money'] = 2
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:sodaed',
@@ -143,14 +145,14 @@ local optionsSoda = {
                 disable = {
                     move = true,
                 },
-                anim = {dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1'},
+                anim = { dict = 'mini@sprunk', clip = 'plyr_buy_drink_pt1' },
             })
         end,
         icon = 'fa-solid fa-d',
         label = 'Buy Diet eCola',
-        items = {
-            ['money'] = 2
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
 }
 
@@ -180,15 +182,16 @@ local optionsCoffee = {
                     move = true,
                 },
                 anim = {
-                    dict = 'amb@prop_human_atm@male@idle_a', 
+                    dict = 'amb@prop_human_atm@male@idle_a',
                     clip = 'idle_a'
-            }})
-        end,        
+                }
+            })
+        end,
         icon = 'fa-solid fa-mug-hot',
         label = 'Make Black Coffee',
-        items = {
-            ['money'] = 3
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:coffeemk',
@@ -203,15 +206,16 @@ local optionsCoffee = {
                     move = true,
                 },
                 anim = {
-                    dict = 'amb@prop_human_atm@male@idle_a', 
+                    dict = 'amb@prop_human_atm@male@idle_a',
                     clip = 'idle_a'
-            }})
+                }
+            })
         end,
         icon = 'fa-solid fa-cow',
         label = 'Make Coffee with Milk',
-        items = {
-            ['money'] = 3
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:coffeesg',
@@ -226,15 +230,16 @@ local optionsCoffee = {
                     move = true,
                 },
                 anim = {
-                    dict = 'amb@prop_human_atm@male@idle_a', 
+                    dict = 'amb@prop_human_atm@male@idle_a',
                     clip = 'idle_a'
-            }})
+                }
+            })
         end,
         icon = 'fa-solid fa-cubes-stacked',
         label = 'Make Coffee with Sugar',
-        items = {
-            ['money'] = 3
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
     {
         name = 'shark:coffedb',
@@ -249,15 +254,16 @@ local optionsCoffee = {
                     move = true,
                 },
                 anim = {
-                    dict = 'amb@prop_human_atm@male@idle_a', 
+                    dict = 'amb@prop_human_atm@male@idle_a',
                     clip = 'idle_a'
-            }})
+                }
+            })
         end,
         icon = 'fa-brands fa-canadian-maple-leaf',
         label = 'Make Double-Double',
-        items = {
-            ['money'] = 3
-        }
+        canInteract = function(entity, distance, coords, name, bone)
+            return not IsEntityDead(entity) and distance < maxDistance
+        end
     },
 }
 

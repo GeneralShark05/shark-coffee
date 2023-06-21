@@ -23,10 +23,10 @@ local classes = {
 
 RegisterServerEvent('sharkcoffee:buy', function(type, name)
 	local src = source
+	Wait(classes[type].waitTime)
 	local count = ox_inventory:Search(src, 'count', 'money')
 	if count >= classes[type].cost then
 		ox_inventory:RemoveItem(src, 'money', classes[type].cost)
-		Wait(classes[type].waitTime)
 		if type == 'coffee' then
 			ox_inventory:AddItem(src, 'coffee', 1, {label = itemName[name], description = 'A '..itemName[name]})
 		elseif type == 'can' then
@@ -34,5 +34,12 @@ RegisterServerEvent('sharkcoffee:buy', function(type, name)
 		elseif type == 'water' then
 			ox_inventory:AddItem(src, 'water', 1)
 		end
-end
+	else
+		TriggerClientEvent('ox_lib:notify', src, {
+			id = 'vendError',
+			title = 'Cannot Vend',
+			description = 'You don\'t have enough cash to buy this!',
+			type = 'error'
+		})
+	end
 end)
